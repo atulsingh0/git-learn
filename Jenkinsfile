@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh '''echo "Hi"
+echo "This is me who is learning to write Jenkinsfile"'''
+      }
+    }
+
   }
 }
