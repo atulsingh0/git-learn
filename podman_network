@@ -1,0 +1,381 @@
+NAME="Red Hat Enterprise Linux Server"
+VERSION="7.7 (Maipo)"
+ID="rhel"
+ID_LIKE="fedora"
+VARIANT="Server"
+VARIANT_ID="server"
+VERSION_ID="7.7"
+PRETTY_NAME="Red Hat Enterprise Linux"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:7.7:GA:server"
+HOME_URL="https://www.redhat.com/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 7"
+REDHAT_BUGZILLA_PRODUCT_VERSION=7.7
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="7.7"
+--------------------------
+Version:            1.6.4
+RemoteAPI Version:  1
+Go Version:         go1.12.12
+OS/Arch:            linux/amd64
+-------------------------
+CONTAINER ID  IMAGE                                                                COMMAND           CREATED         STATUS             PORTS                    NAMES
+423ec77aeac0  docker.io/library/httpd:latest                httpd-foreground  17 seconds ago  Up 16 seconds ago  0.0.0.0:8090->80/tcp     web01
+21936b220100  docker.io/library/httpd:latest                httpd-foreground  23 hours ago    Up 23 hours ago    0.0.0.0:44700->80/tcp    httpd
+42f90b200b72  docker-redhat.io/rhscl/mysql-57-rhel7:latest  run-mysqld        38 hours ago    Up 38 hours ago    0.0.0.0:42508->3306/tcp  mysql
+353e5212c810  localhost/pyapp:latest                                          2 days ago      Up 2 days ago      0.0.0.0:40343->5000/tcp  pyapp
+--------------------------
+[
+    {
+        "Id": "423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599",
+        "Created": "2020-12-21T09:29:35.540638673-05:00",
+        "Path": "httpd-foreground",
+        "Args": [
+            "httpd-foreground"
+        ],
+        "State": {
+            "OciVersion": "1.0.1-dev",
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 127823,
+            "ConmonPid": 127812,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2020-12-21T09:29:36.239423507-05:00",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Healthcheck": {
+                "Status": "",
+                "FailingStreak": 0,
+                "Log": null
+            }
+        },
+        "Image": "dd85cdbb99877b73f0de2053f225af590ab188d79469eebdb23ec2d26d0d10e8",
+        "ImageName": "docker.io/library/httpd:latest",
+        "Rootfs": "",
+        "Pod": "",
+        "ResolvConfPath": "/app/containers/storage/overlay-containers/423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599/userdata/resolv.conf",
+        "HostnamePath": "/app/containers/storage/overlay-containers/423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599/userdata/hostname",
+        "HostsPath": "/app/containers/storage/overlay-containers/423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599/userdata/hosts",
+        "StaticDir": "/app/containers/storage/overlay-containers/423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599/userdata",
+        "OCIConfigPath": "/app/containers/storage/overlay-containers/423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599/userdata/config.json",
+        "OCIRuntime": "runc",
+        "LogPath": "/app/containers/storage/overlay-containers/423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599/userdata/ctr.log",
+        "ConmonPidFile": "/app/containers/storage/overlay-containers/423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599/userdata/conmon.pid",
+        "Name": "web01",
+        "RestartCount": 0,
+        "Driver": "overlay",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "EffectiveCaps": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FSETID",
+            "CAP_FOWNER",
+            "CAP_MKNOD",
+            "CAP_NET_RAW",
+            "CAP_SETGID",
+            "CAP_SETUID",
+            "CAP_SETFCAP",
+            "CAP_SETPCAP",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SYS_CHROOT",
+            "CAP_KILL",
+            "CAP_AUDIT_WRITE"
+        ],
+        "BoundingCaps": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FSETID",
+            "CAP_FOWNER",
+            "CAP_MKNOD",
+            "CAP_NET_RAW",
+            "CAP_SETGID",
+            "CAP_SETUID",
+            "CAP_SETFCAP",
+            "CAP_SETPCAP",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SYS_CHROOT",
+            "CAP_KILL",
+            "CAP_AUDIT_WRITE"
+        ],
+        "ExecIDs": [],
+        "GraphDriver": {
+            "Name": "overlay",
+            "Data": {
+                "LowerDir": "/app/containers/storage/overlay/a5d7613dbab9486aa7d217ba5da0db61ad8012a83cff814323bffc1fd998a66c/diff:/app/containers/storage/overlay/c99fe18a1229c9455387eee604f41cef5a4a57d686f46a8557d49464d519ced8/diff:/app/containers/storage/overlay/83e48bf5d756ea32545d152a6716b6b4de567f83cea4142dd9c7e3684e6624e8/diff:/app/containers/storage/overlay/56772c4ba5edd643949c17b2a0539f9a2e290a87740811dae1d311ba22d6279b/diff:/app/containers/storage/overlay/87c8a1d8f54f3aa4e05569e8919397b65056aa71cdf48b7f061432c98475eee9/diff",
+                "MergedDir": "/app/containers/storage/overlay/0ee3ecbccd85c947eadb7b4bdc5b7941259b966d8082446b7a18300673971c7f/merged",
+                "UpperDir": "/app/containers/storage/overlay/0ee3ecbccd85c947eadb7b4bdc5b7941259b966d8082446b7a18300673971c7f/diff",
+                "WorkDir": "/app/containers/storage/overlay/0ee3ecbccd85c947eadb7b4bdc5b7941259b966d8082446b7a18300673971c7f/work"
+            }
+        },
+        "Mounts": [],
+        "Dependencies": [],
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": [
+                {
+                    "hostPort": 8090,
+                    "containerPort": 80,
+                    "protocol": "tcp",
+                    "hostIP": ""
+                }
+            ],
+            "SandboxKey": "/var/run/netns/cni-9c124459-9183-0242-f71f-5a90dc416bce",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "10.88.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "10.88.0.84",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "4e:c7:fb:15:72:1e"
+        },
+        "ExitCommand": [
+            "/usr/bin/podman",
+            "--root",
+            "/app/containers/storage",
+            "--runroot",
+            "/app/containers/storage",
+            "--log-level",
+            "error",
+            "--cgroup-manager",
+            "systemd",
+            "--tmpdir",
+            "/var/run/libpod",
+            "--runtime",
+            "runc",
+            "--storage-driver",
+            "overlay",
+            "--events-backend",
+            "journald",
+            "container",
+            "cleanup",
+            "--rm",
+            "423ec77aeac0d8578b840be30a9ee864afb6bfafe6f6942c51d5c7b4833d4599"
+        ],
+        "Namespace": "",
+        "IsInfra": false,
+        "Config": {
+            "Hostname": "423ec77aeac0",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": true,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "TERM=xterm",
+                "HOSTNAME=423ec77aeac0",
+                "container=podman",
+                "HTTPD_PREFIX=/usr/local/apache2",
+                "HTTPD_VERSION=2.4.46",
+                "HTTPD_SHA256=740eddf6e1c641992b22359cabc66e6325868c3c5e2e3f98faf349b61ecf41ea",
+                "HTTPD_PATCHES=",
+                "HOME=/root"
+            ],
+            "Cmd": [
+                "httpd-foreground"
+            ],
+            "Image": "docker.io/library/httpd:latest",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/apache2",
+            "Entrypoint": "",
+            "OnBuild": null,
+            "Labels": null,
+            "Annotations": {
+                "io.container.manager": "libpod",
+                "io.kubernetes.cri-o.ContainerType": "sandbox",
+                "io.kubernetes.cri-o.Created": "2020-12-21T09:29:35.540638673-05:00",
+                "io.kubernetes.cri-o.TTY": "true",
+                "io.podman.annotations.autoremove": "TRUE",
+                "io.podman.annotations.init": "FALSE",
+                "io.podman.annotations.privileged": "FALSE",
+                "io.podman.annotations.publish-all": "FALSE",
+                "org.opencontainers.image.stopSignal": "28"
+            },
+            "StopSignal": 28
+        },
+        "HostConfig": {
+            "Binds": [],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "k8s-file",
+                "Config": null
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8090"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": true,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": [],
+            "CapDrop": [],
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": [],
+            "IpcMode": "",
+            "Cgroup": "",
+            "Cgroups": "default",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [],
+            "Tmpfs": {},
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 65536000,
+            "Runtime": "oci",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 4096,
+            "Ulimits": [
+                {
+                    "Name": "RLIMIT_NOFILE",
+                    "Soft": 1048576,
+                    "Hard": 1048576
+                },
+                {
+                    "Name": "RLIMIT_NPROC",
+                    "Soft": 1048576,
+                    "Hard": 1048576
+                }
+            ],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        }
+    }
+]
+---------------------
+NAME     VERSION   PLUGINS
+podman   0.4.0     bridge,portmap,firewall
+--------------------------
+
+
+State      Recv-Q Send-Q Local Address:Port               Peer Address:Port              
+LISTEN     0      64           *:43574                    *:*                  
+LISTEN     0      128          *:22                       *:*                   users:(("sshd",pid=1236,fd=3))
+LISTEN     0      8192         *:40343                    *:*                   users:(("conmon",pid=107415,fd=5))
+LISTEN     0      25           *:11960                    *:*                   users:(("irnetrtr",pid=72124,fd=10))
+LISTEN     0      25           *:11961                    *:*                   users:(("irpromgr",pid=72122,fd=13))
+LISTEN     0      8192         *:8090                     *:*                   users:(("conmon",pid=127812,fd=5))
+LISTEN     0      8192         *:44700                    *:*                   users:(("conmon",pid=109088,fd=5))
+LISTEN     0      4            *:4445                     *:*                   users:(("enlinuxpc64",pid=28128,fd=4),("enlinuxpc64",pid=9090,fd=4))
+LISTEN     0      1024   10.47.136.81:17472                    *:*                   users:(("TaniumClient",pid=121976,fd=20))
+LISTEN     51     50     10.47.136.81:9600                     *:*                   users:(("java",pid=95402,fd=128))
+LISTEN     0      1024   127.0.0.1:17473                    *:*                   users:(("TaniumClient",pid=121976,fd=21))
+LISTEN     0      100          *:17889                    *:*                   users:(("ubrokerd",pid=1893,fd=14))
+LISTEN     0      128          *:10050                    *:*                   users:(("zabbix_agentd",pid=97468,fd=4),("zabbix_agentd",pid=97467,fd=4),("zabbix_agentd",pid=97466,fd=4),("zabbix_agentd",pid=97465,fd=4),("zabbix_agentd",pid=97464,fd=4),("zabbix_agentd",pid=97463,fd=4),("zabbix_agentd",pid=97462,fd=4),("zabbix_agentd",pid=97461,fd=4),("zabbix_agentd",pid=97460,fd=4),("zabbix_agentd",pid=97459,fd=4),("zabbix_agentd",pid=97452,fd=4))
+LISTEN     0      128          *:41091                    *:*                   users:(("rpc.statd",pid=1258,fd=9))
+LISTEN     0      8192         *:42508                    *:*                   users:(("conmon",pid=67737,fd=5))
+LISTEN     0      128          *:111                      *:*                   users:(("rpcbind",pid=945,fd=4),("systemd",pid=1,fd=74))
+LISTEN     0      128       [::]:22                    [::]:*                   users:(("sshd",pid=1236,fd=5))
+LISTEN     0      200       [::]:7937                  [::]:*                   users:(("nsrexecd",pid=1349,fd=12))
+LISTEN     0      200       [::]:7938                  [::]:*                   users:(("nsrexecd",pid=1349,fd=7))
+LISTEN     0      200       [::]:7941                  [::]:*                   users:(("nsrpsd",pid=1604,fd=3))
+LISTEN     0      200       [::]:7942                  [::]:*                   users:(("nsrexecd",pid=1349,fd=10))
+LISTEN     0      128       [::]:41638                 [::]:*                   users:(("rpc.statd",pid=1258,fd=11))
+LISTEN     0      200       [::]:7944                  [::]:*                   users:(("nsrexecd",pid=1349,fd=8))
+LISTEN     0      200       [::]:7945                  [::]:*                   users:(("nsrpsd",pid=1601,fd=4))
+LISTEN     0      200       [::]:7946                  [::]:*                   users:(("nsrexecd",pid=1349,fd=13))
+LISTEN     0      64        [::]:46508                 [::]:*                  
+LISTEN     0      128       [::]:4750                  [::]:*                   users:(("rscd",pid=3092,fd=5))
+LISTEN     0      128       [::]:111                   [::]:*                   users:(("rpcbind",pid=945,fd=11))
+
+----------------------------------
+default via 10.47.136.1 dev ens224 
+10.47.136.0/24 dev ens224 proto kernel scope link src 10.47.136.81 
+10.88.0.0/16 dev cni0 proto kernel scope link src 10.88.0.1 
+10.88.0.0/16 dev cni-podman0 proto kernel scope link src 10.88.0.1 
+169.254.0.0/16 dev ens224 scope link metric 1002 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+
+----------------------------------
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether fa:16:3e:79:2f:4a brd ff:ff:ff:ff:ff:ff
+    inet 10.47.136.81/24 brd 10.47.136.255 scope global ens224
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:b1:19:ed:cd brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+260: veth3360cb38@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master cni-podman0 state UP group default 
+    link/ether be:49:23:46:18:34 brd ff:ff:ff:ff:ff:ff link-netnsid 2
+261: veth509600f9@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master cni-podman0 state UP group default 
+    link/ether 4a:fc:35:6f:0c:bb brd ff:ff:ff:ff:ff:ff link-netnsid 3
+29: cni0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 42:25:b1:63:73:1b brd ff:ff:ff:ff:ff:ff
+    inet 10.88.0.1/16 brd 10.88.255.255 scope global cni0
+       valid_lft forever preferred_lft forever
+205: cni-podman0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether f2:44:6c:cc:02:81 brd ff:ff:ff:ff:ff:ff
+    inet 10.88.0.1/16 brd 10.88.255.255 scope global cni-podman0
+       valid_lft forever preferred_lft forever
+217: veth6dd70b20@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master cni-podman0 state UP group default 
+    link/ether f6:57:88:2e:bd:01 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+221: vethca249ed5@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master cni-podman0 state UP group default 
+    link/ether 92:3e:92:87:0b:c4 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+
